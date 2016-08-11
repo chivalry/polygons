@@ -74,13 +74,14 @@ class EquilateralTriangle(RegularPolygon):
     def name(self):
         return 'equilateral triangle'
 
-hexagon = RegularPolygon(6, 10)
-print('hexagon area: ' + str(hexagon.area))
-print('hexagon name: ' + hexagon.name)
-print('hexagon angles: ' + str(hexagon.angles))
+if __name__ == '__main__':
+    hexagon = RegularPolygon(6, 10)
+    print('hexagon area: ' + str(hexagon.area))
+    print('hexagon name: ' + hexagon.name)
+    print('hexagon angles: ' + str(hexagon.angles))
 
-square = Square(10)
-print('square area: ' + str(square.area))
+    square = Square(10)
+    print('square area: ' + str(square.area))
 
-triangle = EquilateralTriangle(9)
-print('triangle area: ' + str(triangle.area))
+    triangle = EquilateralTriangle(9)
+    print('triangle area: ' + str(triangle.area))
