@@ -19,7 +19,10 @@ class RegularPolygon(Polygon):
 
     @property
     def area(self):
-        return (self.apothem * self.perimeter) / 2
+        if self.sides == 4:
+            return self.length ** 2
+        else:
+            return (self.apothem * self.perimeter) / 2
 
     @classmethod
     def angle(self, sides:int):
