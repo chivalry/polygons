@@ -1,4 +1,7 @@
 class Polygon:
+    """A class representing any polygon as a list of sides and a list of angles.
+    """
+
     names = {
             3: 'triangle',
             4: 'quadrilateral',
@@ -11,6 +14,13 @@ class Polygon:
     }
 
     def __init__(self, sides:int, lengths:list, angles:list):
+        """Initialize the Polygon class.
+
+           :param sides: The number of sides the polygon has
+           :param lengths: A list of lengths for each side
+           :param angles: A list of angles, angle i is between lengths i and i + 1
+           :raises ValueError: if arguments are invalid for any reason
+        """
         self.sides = sides
         self.lengths = lengths
         self.angles = angles
@@ -18,14 +28,20 @@ class Polygon:
         self.confirm_attributes()
 
     @property
-    def perimeter(self):
+    def perimeter(self) -> float:
+        """Return the perimiter of the polygon.
+        """
         return sum(self.lengths)
 
     @property
-    def name(self):
+    def name(self) -> str:
+        """Return the name of the polygon.
+        """
         return self.names[self.sides]
 
     def confirm_attributes(self):
+        """Confirm attributes are within bounds restrictions.
+        """
         if (not isinstance(self.sides, int)) and (not self.sides.is_integer()):
             raise ValueError('sides must be an integer')
 
@@ -48,8 +64,3 @@ class Polygon:
             raise ValueError('angles must sum correctly')
         if not all(angle > 0 for angle in self.angles):
             raise ValueError('angles must be positive')
-
-if __name__ == '__main__':
-    poly = Polygon(5, [3, 4, 5, 4, 6], [100, 110, 120, 130, 80])
-    print('poly name: ' + poly.name)
-    print('poly perimiter: ' + str(poly.perimeter))

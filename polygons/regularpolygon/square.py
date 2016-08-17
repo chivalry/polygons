@@ -1,16 +1,22 @@
 from .regularpolygon import RegularPolygon
 
 class Square(RegularPolygon):
+    """A class to represent a square.
+    """
+
     def __init__(self, length:float):
+        """Initialize the Square class.
+        """
         super().__init__(4, length)
 
     @property
-    def area(self):
+    def area(self) -> float:
+        """Return the area of the square.
+        """
         return self.length ** 2
 
     @property
-    def name(self):
+    def name(self) -> str:
+        """Override `Polygon.name` function.
+        """
         return 'square'
-
-if __name__ == '__main__':
-    print('square area: ' + str(Square(10).area))
