@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # polygons documentation build configuration file, created by
-# sphinx-quickstart on Tue Aug 16 15:54:02 2016.
+# sphinx-quickstart on Wed Aug 17 16:38:29 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -34,7 +34,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinx_autodoc_annotation',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
