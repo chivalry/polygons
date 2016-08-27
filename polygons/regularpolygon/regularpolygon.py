@@ -7,12 +7,12 @@ class RegularPolygon(Polygon):
     """
 
     def __init__(self, sides:int, length:float):
-    """Initialize the RegularPolygon class.
-    
-       :param sides: The number of sides the regular polygon has
-       :param length: The length of each side
-       :raises ValueError: if sides or length are invalid values
-    """
+        """Initialize the RegularPolygon class.
+        
+           :param sides: The number of sides the regular polygon has
+           :param length: The length of each side
+           :raises ValueError: if sides or length are invalid values
+        """
         self.length = length
         lengths = [length] * sides
         angles = [self.angle(sides)] * sides
